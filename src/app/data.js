@@ -78,7 +78,7 @@ export const projectsData = [
     name: "Portfolio 2.0",
     description: "My second portfolio site using React.JS",
     date: "2023-12-30",
-    demoLink: "https://portfolio2.TBD.com",
+    demoLink: "https://master.d371qrhx3z8fmf.amplifyapp.com/",
   },
 ];
 
