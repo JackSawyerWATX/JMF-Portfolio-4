@@ -29,8 +29,8 @@ export default function Form() {
 
     const toastID = toast.loading("Sending your message, please wait...")
 
-    emailjs
-      .send(
+    try {
+      emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         params,
@@ -41,18 +41,15 @@ export default function Form() {
           }
         }
       )
-      .then(
-        () => {
-          toast.success("I have recieved your message and will reply to you soon.", {
-            id: toastID
-          });
-        },
-        (error) => {
-          toast.error("There was an error sending you message. Please try again soon.", {
-            id: toastID
-          });
-        },
-      );
+      toast.success("I have recieved your message and will reply to you soon.", {
+        id: toastID
+      });
+    }
+    catch (error) {
+      toast.error("There was an error sending you message. Please try again soon.", {
+        id: toastID
+      });
+    }
   };
 
   const onSubmit = data => {
