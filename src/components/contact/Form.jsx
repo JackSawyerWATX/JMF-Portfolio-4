@@ -29,11 +29,7 @@ export default function Form() {
     const toastID = toast.loading("Sending your message, please wait...")
 
     try {
-<<<<<<< HEAD
-      await emailjs.send(
-=======
       emailjs.send(
->>>>>>> 01f3002d4d658b0a5f268d2d19445e805416ceb6
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         params,
@@ -41,13 +37,7 @@ export default function Form() {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
           limitRate: {
             throttle: 5000, // cannot send more than one email every 5 seconds
-<<<<<<< HEAD
           }})
-=======
-          }
-        }
-      )
->>>>>>> 01f3002d4d658b0a5f268d2d19445e805416ceb6
       toast.success("I have recieved your message and will reply to you soon.", {
         id: toastID
       });
