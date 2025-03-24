@@ -25,12 +25,11 @@ export default function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
 
-  const sendEmail = (params) => {
-
+  const sendEmail = async (params) => {
     const toastID = toast.loading("Sending your message, please wait...")
 
-    emailjs
-      .send(
+    try {
+      await emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         params,
@@ -38,32 +37,25 @@ export default function Form() {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
           limitRate: {
             throttle: 5000, // cannot send more than one email every 5 seconds
-          }
-        }
-      )
-      .then(
-        () => {
-          toast.success("I have recieved your message and will reply to you soon.", {
-            id: toastID
-          });
-        },
-        (error) => {
-          toast.error("There was an error sending you message. Please try again soon.", {
-            id: toastID
-          });
-        },
-      );
+          }})
+      toast.success("I have recieved your message and will reply to you soon.", {
+        id: toastID
+      });
+    }
+    catch (error) {
+      toast.error("There was an error sending you message. Please try again soon.", {
+        id: toastID
+      });
+    }
   };
 
   const onSubmit = data => {
-
     const templateParams = {
       to_name: "Jack Sawyer",
       from_name: data.name,
       from_email: data.email,
       message: data.message,
     }
-
     sendEmail(templateParams)
   };
   console.log(errors);
@@ -113,14 +105,12 @@ export default function Form() {
             }, minLength: {
               value: 4,
               message: "Message should be at least a 4 letter word."
-
             }
           })}
           className='w-full p-2 rounded-md shadow-lg test-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg' />
 
         {
           errors.message && <span className="inline-block self-start text-accent">{errors.message.message}</span>}
-
         <motion.input
           variants={item}
           value={"Send Transmission"}

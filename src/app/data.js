@@ -68,17 +68,23 @@ export const projectsData = [
   },
   {
     id: 8,
+    name: "Bishop's Record Store",
+    description: "An album database built using the PERN stack",
+    demolink: "https://pern-store-a4w9.onrender.com/",
+  },
+  {
+    id: 9,
     name: "Portfolio 1.0",
     description: "My first site using static HTML, CSS, & JS.",
     date: "2022-07-12",
     demoLink: "https://main.d33zr5pqj7f3ln.amplifyapp.com/",
   },
   {
-    id: 9,
+    id: 10,
     name: "Portfolio 2.0",
     description: "My second portfolio site using React.JS",
     date: "2023-12-30",
-    demoLink: "https://portfolio2.TBD.com",
+    demoLink: "https://master.d371qrhx3z8fmf.amplifyapp.com/",
   },
 ];
 

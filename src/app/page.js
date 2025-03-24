@@ -10,7 +10,7 @@ const Satellite = dynamic(() => import("@/components/models/Satellite"), { ssr: 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between relative">
+    <main className="flex min-h-screen flex-col justify-between relative overflow-hidden">
       <Image
         priority
         sizes="100vw"
