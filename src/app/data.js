@@ -69,7 +69,7 @@ export const projectsData = [
   {
     id: 8,
     name: "Bishop's Record Store",
-    description: "An album database built using the PERN stack",
+    description: "An album database built on the PERN stack",
     demolink: "https://pern-store-a4w9.onrender.com/",
   },
   {
