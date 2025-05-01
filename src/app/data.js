@@ -69,7 +69,7 @@ export const projectsData = [
     {
         id: 8,
         name: "Bishop's Cameras",
-        description: "A full stack e-commerce store built on the MERN stack",
+        description: "A full stack web store built on the MERN stack",
         date: "2025-04-30",
         demoLink: "https://e-commerce-store-nlnd.onrender.com/",
     },
