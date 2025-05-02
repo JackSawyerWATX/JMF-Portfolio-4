@@ -2,28 +2,30 @@
 
 import { FirstPersonControls } from "@react-three/drei"
 
-const { useState, useEffect } = require("react")
+// const { useState, useEffect } = require("react")
+import { useState, useEffect } from "react"
 
 const useScreenSize = () => {
-  const [screenSize, setScreenSize] = useState()
-  
-  useEffect(() => {
-    function getScreenSize() {
-      return window.innerWidth;
-    }
+    const [screenSize, setScreenSize] = useState()
 
-    function handleResize() {
-      setScreenSize(getScreenSize());
-    }
+    useEffect(() => {
+        function getScreenSize() {
+            return window.innerWidth;
+        }
 
-    handleResize();
+        function handleResize() {
+            setScreenSize(getScreenSize());
+        }
 
-    window.addEventListener('resize', handleResize);
+        handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, [])
+        window.addEventListener('resize', handleResize);
 
-  return screenSize
+        return () => window.removeEventListener("resize", handleResize);
+
+    }, [])
+
+    return screenSize
 }
 
 export default useScreenSize;

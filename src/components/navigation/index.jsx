@@ -1,11 +1,11 @@
 "use client"
 
-import { BtnList } from '@/app/data'
-import React from 'react'
-import NavButton from './NavButton';
-import useScreenSize from '../hooks/useScreenSize';
-import ResponsiveComponent from '../ResponsiveComponent';
-import { motion } from "framer-motion"
+import { BtnList } from "@/app/data";
+import React from "react";
+import NavButton from "./NavButton";
+import useScreenSize from "../hooks/useScreenSize";
+import ResponsiveComponent from "../ResponsiveComponent";
+import { motion } from "framer-motion";
 
 const container = {
     hidden: { opacity: 0 },
@@ -53,9 +53,10 @@ const Navigation = () => {
                             <motion.div
                                 variants={container}
                                 initial="hidden"
-                                animate="show" className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-start xs:items-center justify-center relative group">  {/* Satellite screen position */}
+                                animate="show"
+                                className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 item-start xs:items-center justify-center relative group xs:hidden">  {/* Left Icon screen position */}
                                 {
-                                    BtnList.slice(0, BtnList.length / 2).map((btn, index) => {
+                                    BtnList.slice(0, BtnList.length / 2).map((btn) => {
                                         return <NavButton key={btn.label} x={0} y={0} {...btn} />
                                     })
                                 }
@@ -63,12 +64,13 @@ const Navigation = () => {
                             <motion.div
                                 variants={container}
                                 initial="hidden"
-                                animate="show" className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group">  {/* Satellite screen position */}
-                                {
-                                    BtnList.slice(BtnList.length / 2, BtnList.length).map((btn, index) => {
-                                        return <NavButton key={btn.label} x={0} y={0} {...btn} labelDirection='left' />
-                                    })
-                                }
+                                animate="show"
+                                className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group xs:hidden">  {/* Right Icon screen position */}
+                                {BtnList.slice(BtnList.length / 2, BtnList.length).map(
+                                    (btn) => {
+                                        return <NavButton key={btn.label} x={0} y={0} {...btn} labelDirection = "left" />
+                                    }
+                                )}
                             </motion.div>
                         </>
                     );
@@ -78,5 +80,6 @@ const Navigation = () => {
     )
 }
 
-export default Navigation
+export default Navigation;
 
+// Mine

@@ -95,7 +95,7 @@ export const BtnList = [
     { label: "Projects", link: "/projects", icon: "projects", newTab: false },
     { label: "Contact", link: "/contact", icon: "contact", newTab: false },
     {
-        label: "Github",
+        label: "GitHub",
         link: "https://github.com/JackSawyerWATX",
         icon: "github",
         newTab: true,

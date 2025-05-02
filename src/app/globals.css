@@ -3,55 +3,55 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 27 27 27;
-    --foreground: 225 225 225;
-    --muted: 115 115 115;
-    --accent: 254 254 91;
-    /* #FEFE5B */
-  }
+    :root {
+        --background: 27 27 27;
+        --foreground: 225 225 225;
+        --muted: 115 115 115;
+        --accent: 254 254 91;
+        /* #FEFE5B */
+    }
 }
 
 @layer utilities {
-  .pause {
-    animation-play-state: paused;
-  }
+    .pause {
+        animation-play-state: paused;
+    }
 
-  .custom-bg {
-    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
-  }
+    .custom-bg {
+        @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+    }
 }
 
 @keyframes move {
-  0% {
-    transform: translate(-50%, -50%) scale(0.1);
-    /* Starts small from the center */
-  }
+    0% {
+        transform: translate(-50%, -50%) scale(0.1);
+        /* Starts small from the center */
+    }
 
-  100% {
-    transform: translate(var(--x), var(--y)) scale(1);
-    /* Outward movement */
-  }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(1);
+        /* Outward movement */
+    }
 }
 
 /* Zoom-in effect for the background */
 @keyframes zoomIn {
-  0% {
-    transform: scale(1) translateZ(0);
-  }
+    0% {
+        transform: scale(1) translateZ(0) translateY(0);
+    }
 
-  50% {
-    transform: scale(1.5) translateZ(-10px);
-    /* Zoom in slightly */
-  }
+    50% {
+        transform: scale(1.5) translateZ(-10px) translateY(5%);
+        /* Zoom in slightly */
+    }
 
-  100% {
-    transform: scale(2) translateZ(-20px);
-    /* Further zoom-in effect */
-  }
+    100% {
+        transform: scale(2) translateZ(-20px) translateY(10%);
+        /* Further zoom-in effect */
+    }
 }
 
 /* Apply the zoom effect to the background image */
 .bg-image {
-  animation: zoomIn 90s infinite linear;
+    animation: zoomIn 90s infinite linear;
 }
