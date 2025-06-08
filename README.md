@@ -12,9 +12,7 @@ As the Chief Flight Director of my web development journey, I specialize in:
     Full-Stack Solutions: Integrating frontend and backend technologies to deliver seamless and scalable web applications.
 
     Design & UX: Applying design principles to ensure intuitive and visually appealing user experiences.
-    jonathanfausset.com
 
-With over 7 years of experience, I have collaborated with 18+ clients, delivering high-quality web solutions across various industries. Learn more about me.
 🛠️ Projects
 
 Explore some of my recent projects:
@@ -34,11 +32,7 @@ Explore some of my recent projects:
     Bishop's Record Store: An online store offering a curated selection of vinyl records.
 
     Bishop's Cameras: An e-commerce platform for photography equipment and accessories.
-    jonathanfausset.com
-    flickr.com+8flickr.com+8flickr.com+8
 
-View all projects.
-jonathanfausset.com+2jonathanfausset.com+2jonathanfausset.com+2
 📄 Resume
 
 For a detailed overview of my professional experience, skills, and achievements, please refer to my resume.
@@ -53,7 +47,7 @@ For a detailed overview of my professional experience, skills, and achievements,
     jonathanfausset.com+1jonathanfausset.com+1
 
 Download my resume.
-jonathanfausset.com+1jonathanfausset.com+1
+
 📬 Contact
 
 Ready to collaborate or have questions? Reach out to me through the contact form on my website.
@@ -67,10 +61,9 @@ Ready to collaborate or have questions? Reach out to me through the contact form
     GitHub: github.com/jacksawyerwatx
 
     BlueSky: bsky.app
-    flickr.com+9jonathanfausset.com+9flickr.com+9
 
 Contact me.
-jonathanfausset.com
-🌌 Let's Connect
+
+🌌 Let's Connect!
 
 Embark on a digital journey with me. Together, we can explore new horizons in web development and create impactful online experiences.
