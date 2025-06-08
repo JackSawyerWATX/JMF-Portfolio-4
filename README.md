@@ -1,99 +1,76 @@
-# Next.js Creative Portfolio Tutorial: Build Amazing Portfolio Website with Next.js, Three.js, and Tailwind CSS 🔥
+Jonathan Fausset – Web Developer Portfolio
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/Next.js-Creative-Portfolio-Website?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/Next.js-Creative-Portfolio-Website?style=social&logo=KashFlow&maxAge=3600)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
+Welcome to the official portfolio of Jonathan Fausset, a seasoned web developer with a passion for crafting dynamic and user-centric digital experiences.
+🚀 About Me
 
-This repository contains **final code** for Next.js Creative Portfolio website built using Next.js and Three.js. <br />
+As the Chief Flight Director of my web development journey, I specialize in:
 
-For Demo checkout following link👇: <br />
-[Nextjs Creative Portfolio Website Demo](https://next-js-creative-portfolio-website.vercel.app/) <br />
+    Frontend Development: Utilizing JavaScript, React.js, and Next.js to build responsive and engaging user interfaces.
 
-Starter Code Files👇: <br />
-➡ Link 💚: [Nextjs Creative Portfolio Website Starter Code](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files) <br />
-<!--- ➡ Link 2💚(If you want to support): [Nextjs Creative Portfolio Website Final Code](https://codebucks.gumroad.com/l/ypzlu) <br /> --->
+    Backend Development: Employing Node.js, Express.js, and Python frameworks like Django and Flask to create robust server-side applications.
 
-If you want to learn how to create it please follow below tutorial👇: <br />
-➡ Tutorial Link 💚: [Personal Portfolio Website with Next.js, Three.js & Tailwind CSS Tutorial](https://youtu.be/T5t46vuW8fo) 
-[![YouTube Video Views](https://img.shields.io/youtube/views/T5t46vuW8fo
-)](https://youtu.be/T5t46vuW8fo) <br />
+    Full-Stack Solutions: Integrating frontend and backend technologies to deliver seamless and scalable web applications.
 
-💚 Checkout my personal website [DevDreaming](https://devdreaming.com) <br />
+    Design & UX: Applying design principles to ensure intuitive and visually appealing user experiences.
+    jonathanfausset.com
 
----
-# ⭐DO NOT FORGET TO STAR THIS REPO⭐
----
+With over 7 years of experience, I have collaborated with 18+ clients, delivering high-quality web solutions across various industries. Learn more about me.
+🛠️ Projects
 
-## Images of The Portfolio Website:
+Explore some of my recent projects:
 
-#### Home
-![Nextjs Creative Portfolio Website](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/Home-desktop.png)
+    Landon Hotel: A modern hotel booking platform with real-time availability and booking features.
 
-#### About
-![Nextjs Creative Portfolio Website About Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/About-desktop-full.png)
+    Antique Aircraft: An interactive catalog showcasing vintage aircraft with detailed specifications.
 
-#### Projects
-![Next.js Creative Portfolio Website Projects Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/Projects-desktop.png)
+    Photo Blog: A personal blog dedicated to photography, featuring galleries and articles.
 
-#### Contact
-![Next.js Creative Portfolio Website Contact Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/Contact-desktop.png)
+    Personal Blog: A space for sharing thoughts, tutorials, and insights on web development.
 
-#### Mobile Version
-![Next.js Creative Portfolio Website Contact Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/Home-mobile.png)
-![Next.js Creative Portfolio Website Contact Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/About-mobile.png)
-![Next.js Creative Portfolio Website Contact Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/Projects-mobile.png)
-![Next.js Creative Portfolio Website Contact Page](https://github.com/codebucks27/Nextjs-Creative-Portfolio-Starter-Code-Files/blob/main/website%20images/Contact-mobile.png)
+    Local Weather: A weather forecasting application providing real-time updates and forecasts.
 
-## Resources Used in This Project
+    QR Generator: A tool for generating customizable QR codes for various purposes.
 
-#### 3D Models
+    Bishop's Record Store: An online store offering a curated selection of vinyl records.
 
-- ["Tim Mckee - Boy Wizard"](https://skfb.ly/6YATu) by [elbertwithane is licensed under Creative Commons Attribution ](http://creativecommons.org/licenses/by/4.0/).
-- ["Stylized wizard hat"](https://skfb.ly/ozxOQ) by [Enkarra is licensed under Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
-- ["Wizard Staff"](https://skfb.ly/6QYZw) by [Toymancer Studio is licensed under Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/).
+    Bishop's Cameras: An e-commerce platform for photography equipment and accessories.
+    jonathanfausset.com
+    flickr.com+8flickr.com+8flickr.com+8
 
-#### AI Images
+View all projects.
+jonathanfausset.com+2jonathanfausset.com+2jonathanfausset.com+2
+📄 Resume
 
-- Created with the help of [Playground AI](https://playgroundai.com/)
+For a detailed overview of my professional experience, skills, and achievements, please refer to my resume.
 
-#### Github Stats & Details
+    Current Role: Software Engineer at Scale AI, San Francisco Bay Area.
 
-- [Github ReadMe Stats](https://github.com/anuraghazra/github-readme-stats)
-- [Skills Icons](https://github.com/tandpfun/skill-icons)
-- [Github Readme Streak Stats](https://github.com/denvercoder1/github-readme-streak-stats)
+    Previous Experience: Full Stack Developer at Jack Sawyer Software, Seattle, WA.
 
-#### Development Resources
+    Technical Skills: Proficient in Python, Java, JavaScript, TypeScript, Node.js, React, Django, Flask, SQL, NoSQL, AWS, and more.
 
-- Fonts from [Google Fonts](https://fonts.google.com/) <br />
-- Icons from [Lucide Icons](https://lucide.dev/) <br />
-- Notifications from [Sonner](https://sonner.emilkowal.ski/) <br />
-- Form created using [react-hook-form](https://react-hook-form.com/) <br />
-- Animations using [framer-motion](https://www.framer.com/motion/) <br />
-- Emails using [Emailjs](https://www.emailjs.com/) <br />
-- Convert 3d models to JSX using [Gltf JSX](https://github.com/pmndrs/gltfjsx)
+    Professional Highlights: Led development of communications systems, optimized UX, implemented CI/CD pipelines, and enhanced software robustness.
+    jonathanfausset.com+1jonathanfausset.com+1
 
-#### Audio 
+Download my resume.
+jonathanfausset.com+1jonathanfausset.com+1
+📬 Contact
 
-- Music by <a href="https://pixabay.com/users/shidenbeatsmusic-25676252/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=20772">Shiden Beats Music</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=20772">Pixabay</a>
+Ready to collaborate or have questions? Reach out to me through the contact form on my website.
 
----
+    Email: jonathan.fausset@me.com
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+    Phone: 206-713-3756
 
-## Getting Started
+    LinkedIn: linkedin.com/in/jonathan-fausset-dev
 
-First, install the dependencies and run the development server:
+    GitHub: github.com/jacksawyerwatx
 
-```bash
-npm run install # to install all dependencies
+    BlueSky: bsky.app
+    flickr.com+9jonathanfausset.com+9flickr.com+9
 
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Contact me.
+jonathanfausset.com
+🌌 Let's Connect
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Embark on a digital journey with me. Together, we can explore new horizons in web development and create impactful online experiences.
