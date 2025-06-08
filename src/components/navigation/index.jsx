@@ -81,5 +81,3 @@ const Navigation = () => {
 }
 
 export default Navigation;
-
-// Mine
