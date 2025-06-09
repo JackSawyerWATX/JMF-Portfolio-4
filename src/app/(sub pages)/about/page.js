@@ -6,8 +6,7 @@ import AboutDetails from "@/components/about";
 import dynamic from "next/dynamic";
 
 const Jwst = dynamic(() => import("@/components/models/Jwst"), { 
-    ssr: false, 
-    loading: () => <div>Loading 3D Model...</div> });
+    ssr: false });
 
 export const metadata = { title: "About" };
 
