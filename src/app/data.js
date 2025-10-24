@@ -87,6 +87,20 @@ export const projectsData = [
         date: "2023-12-30",
         demoLink: "https://master.d371qrhx3z8fmf.amplifyapp.com/",
     },
+    {
+      id: 11,
+      name: "Jack Sawyer Software",
+      description: "A SaaS website for a fictional software company",
+      date: "2024-01-01",
+      demoLink: "https://main.d223d5tdol49nx.amplifyapp.com/",
+    },
+    {
+      id: 12,
+      name: "Anomaly",
+      description: "A landing page design",
+      date: "2024-10-01",
+      demoLink: "https://main.d1t6yxakhmk0qv.amplifyapp.com/",
+    }
 ];
 
 export const BtnList = [
