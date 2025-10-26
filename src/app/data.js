@@ -107,6 +107,13 @@ export const projectsData = [
     description: "A landing page design",
     date: "2025-10-25",
     demoLink: "https://main.d251cozp8ltn3x.amplifyapp.com"
+  },
+  {
+    id: 14,
+    name: "Apartment Finder",
+    description: "Contact page for an apartment broker",
+    date: "2024-11-01",
+    demoLink: "https://main.d1ez8rgw1b2mi8.amplifyapp.com/"
   }
 
 ];
