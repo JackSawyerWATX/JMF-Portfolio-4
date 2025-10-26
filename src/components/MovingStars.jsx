@@ -7,6 +7,7 @@ const createStar = () => {
   const distance = Math.random() * 50 + 50; // Random distance to move the star (ensuring a good range)
   const xDirection = Math.cos(angle) * 1000 + 'px';
   const yDirection = Math.sin(angle) * 1000 + 'px';
+  const maxStarsOnScreen = size < 768 ? 100 : 200;
 
   // Random initial position across the screen
   const randomTop = `${Math.random() * 100}%`; // Random top position

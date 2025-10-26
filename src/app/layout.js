@@ -11,6 +11,7 @@ const inter = Inter({
 export const metadata = {
     title: "Jonathan Fausset",
     description: "Portfolio Website",
+    viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };
 
 export default function RootLayout({ children }) {

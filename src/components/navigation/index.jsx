@@ -40,7 +40,7 @@ const Navigation = () => {
                                     ? 'calc(20vw - 1rem)'
                                     : isMedium
                                         ? 'calc(30vw - 1rem)'
-                                        : 'calc(40vw - 1rem)'
+                                        : 'calc(35vw - 1rem)'
                                 const x = `calc(${radius} * ${Math.cos(angleRad)})`
                                 const y = `calc(${radius} * ${Math.sin(angleRad)})`
 

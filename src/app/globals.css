@@ -55,3 +55,10 @@
 .bg-image {
     animation: zoomIn 90s infinite linear;
 }
+
+@media (max-width: 768px) {
+    .bg-image {
+        animation: none;
+        transform: scale(1.2);
+    }
+}
