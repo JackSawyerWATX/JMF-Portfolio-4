@@ -1,13 +1,13 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
+import useScreenSize from './hooks/useScreenSize'
 
 const createStar = () => {
   const angle = Math.random() * 2 * Math.PI;
   const distance = Math.random() * 50 + 50; // Random distance to move the star (ensuring a good range)
   const xDirection = Math.cos(angle) * 1000 + 'px';
   const yDirection = Math.sin(angle) * 1000 + 'px';
-  const maxStarsOnScreen = size < 768 ? 100 : 200;
 
   // Random initial position across the screen
   const randomTop = `${Math.random() * 100}%`; // Random top position
@@ -25,8 +25,10 @@ const createStar = () => {
 
 const MovingStars = () => {
   const [stars, setStars] = useState([])
+  const size = useScreenSize()
 
-  const maxStarsOnScreen = 200; // Sets the max number of stars on the screen
+  // Adjust number of stars based on screen size for performance
+  const maxStarsOnScreen = size < 768 ? 100 : 200;
 
   useEffect(() => {
     const addStarPeriodically = () => {
@@ -43,8 +45,7 @@ const MovingStars = () => {
 
     const interval = setInterval(addStarPeriodically, 1000);
     return () => clearInterval(interval);
-  },
-    []) // Empty dependency array ensures this runs once when the component mounts
+  }, [maxStarsOnScreen]) // Add maxStarsOnScreen as dependency
 
   return (
     // This is the scope of the starfield

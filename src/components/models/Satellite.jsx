@@ -11,12 +11,28 @@ Title: Satellite
 import React, { useRef } from 'react'
 import { PerspectiveCamera, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
+import useScreenSize from '../hooks/useScreenSize'
 
 export default function Satellite(props) {
     const { nodes, materials } = useGLTF('/models/satellite2-transformed.glb')
+    const size = useScreenSize()
 
     const modelRef = useRef()
     const cameraRef = useRef()
+
+    // Responsive scaling and positioning
+    const getScale = () => {
+        if (size < 480) return [0.2, 0.2, 0.2];  // Very small phones
+        if (size < 768) return [0.25, 0.25, 0.25]; // Mobile
+        if (size < 1024) return [0.3, 0.3, 0.3];  // Tablet
+        return [0.34, 0.34, 0.34]; // Desktop
+    };
+
+    const getPosition = () => {
+        if (size < 480) return [-8, -8, -5];   // Very small phones
+        if (size < 768) return [-10, -10, -6]; // Mobile
+        return [-14, -14, -7]; // Desktop
+    };
 
     useFrame((state, delta, xrFrame) => {
         // This function controls satellite movement
@@ -46,8 +62,8 @@ export default function Satellite(props) {
             />
             <group {...props} dispose={null}    // Makes adjustments to the satellite position
                 ref={modelRef}
-                position={[-14, -14, -7]}
-                scale={[0.34, 0.34, 0.34]}
+                position={getPosition()}
+                scale={getScale()}
                 rotation={[0.10, -0.30, -0.12]}>
                 <mesh
                     name="Object_2"

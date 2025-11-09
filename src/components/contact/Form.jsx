@@ -69,7 +69,7 @@ export default function Form() {
                 initial="hidden"
                 animate="show"
                 onSubmit={handleSubmit(onSubmit)}
-                className='max-w-md w-full flex flex-col item-center justify-center space-y-4'
+                className='max-w-md w-full flex flex-col item-center justify-center space-y-3 xxs:space-y-4 px-4'
             >
 
                 <motion.input
@@ -82,22 +82,23 @@ export default function Form() {
                             message: "Name should be at least 2 characters long."
                         }
                     })}
-                    className='w-full p-2 rounded-md shadow-lg test-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg' />
+                    className='w-full p-3 xxs:p-4 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg text-sm xxs:text-base' />
 
                 {
-                    errors.name && <span className="inline-block self-start text-accent">{errors.name.message}</span>}
+                    errors.name && <span className="inline-block self-start text-accent text-xs xxs:text-sm">{errors.name.message}</span>}
 
                 <motion.input
                     variants={item}
                     type="email"
                     placeholder="email" {...register("email", { required: "This field is required.", })}
-                    className='w-full p-2 rounded-md shadow-lg test-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg' />
+                    className='w-full p-3 xxs:p-4 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg text-sm xxs:text-base' />
 
                 {
-                    errors.email && <span className="inline-block self-start text-accent">{errors.email.message}</span>}
+                    errors.email && <span className="inline-block self-start text-accent text-xs xxs:text-sm">{errors.email.message}</span>}
 
                 <motion.textarea
                     variants={item}
+                    rows={4}
                     placeholder='message'{...register("message", {
                         required: "This field is required.",
                         maxLength: {
@@ -108,16 +109,16 @@ export default function Form() {
                             message: "Message should be at least a 4 letter word."
                         }
                     })}
-                    className='w-full p-2 rounded-md shadow-lg test-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg' />
+                    className='w-full p-3 xxs:p-4 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg resize-none text-sm xxs:text-base' />
 
                 {
-                    errors.message && <span className="inline-block self-start text-accent">{errors.message.message}</span>}
+                    errors.message && <span className="inline-block self-start text-accent text-xs xxs:text-sm">{errors.message.message}</span>}
                 <motion.input
                     variants={item}
                     value={"Send Transmission"}
                     disabled={isSubmitting}
                     aria-label="Send message"
-                    className='px-10 py-4 rounded-md shadow-lg bg-background border-accent/30 border-solid hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-accent/50 cursor-pointer capitalize'
+                    className='w-full px-6 xxs:px-10 py-3 xxs:py-4 rounded-md shadow-lg bg-background border-accent/30 border-solid hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize disabled:opacity-50 disabled:cursor-not-allowed text-sm xxs:text-base'
                     type="submit" />
             </motion.form>
         </>

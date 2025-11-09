@@ -1,12 +1,9 @@
 "use client"
 
-import { FirstPersonControls } from "@react-three/drei"
-
-// const { useState, useEffect } = require("react")
 import { useState, useEffect } from "react"
 
 const useScreenSize = () => {
-    const [screenSize, setScreenSize] = useState()
+    const [screenSize, setScreenSize] = useState(1024) // Default to desktop size
 
     useEffect(() => {
         function getScreenSize() {
@@ -17,6 +14,7 @@ const useScreenSize = () => {
             setScreenSize(getScreenSize());
         }
 
+        // Set initial size
         handleResize();
 
         window.addEventListener('resize', handleResize);

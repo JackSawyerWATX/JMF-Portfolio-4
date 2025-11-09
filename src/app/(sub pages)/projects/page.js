@@ -19,8 +19,8 @@ export default function Home() {
 
             <ProjectList projects={projectsData} />
 
-            <div className='flex items-center justify-center fixed top-16 lg:top-20 -translate-x-1/2 lg:-translate-x-8 -z-10 left-1/2 lg:left-0 h-screen'>
-                <RenderModel>
+            <div className='flex items-center justify-center fixed top-8 xxs:top-12 xs:top-16 lg:top-20 -translate-x-1/2 lg:-translate-x-8 -z-10 left-1/2 lg:left-0 h-screen w-full lg:w-auto'>
+                <RenderModel className="w-full h-full">
                     <SaturnV />
                 </RenderModel>
             </div>

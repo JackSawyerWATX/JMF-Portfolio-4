@@ -10,25 +10,44 @@ Title: James Webb Space Telescope
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
-
+import useScreenSize from '../hooks/useScreenSize'
 
 export default function Jwst(props) {
   const { nodes, materials } = useGLTF('/models/jwst-transformed.glb')
+  const size = useScreenSize()
 
   const modelRef = useRef();
 
+  // Responsive scaling
+  const getScale = () => {
+    if (size < 480) return [0.35, 0.35, 0.35];   // Very small phones
+    if (size < 768) return [0.45, 0.45, 0.45];   // Mobile
+    if (size < 1024) return [0.6, 0.6, 0.6];     // Tablet
+    return [0.75, 0.75, 0.75]; // Desktop
+  };
+
+  // Responsive positioning
+  const getBasePosition = () => {
+    if (size < 480) return [0.2, -0.3, 0];   // Very small phones
+    if (size < 768) return [0.3, -0.35, 0];  // Mobile
+    return [0.4, -0.45, 0]; // Desktop
+  };
+
   useFrame((state) => {
-    modelRef.current.rotation.y += -0.0025
-    modelRef.current.position.y = -0.8 + Math.sin(state.clock.elapsedTime) * 0.09 / 5;
-    modelRef.current.position.x = 1.6 + Math.cos(state.clock.elapsedTime) * 0.09 / 5;
+    if (modelRef.current) {
+      modelRef.current.rotation.y += -0.0025
+      const basePos = getBasePosition();
+      modelRef.current.position.y = basePos[1] + Math.sin(state.clock.elapsedTime) * 0.09 / 5;
+      modelRef.current.position.x = basePos[0] + 1.2 + Math.cos(state.clock.elapsedTime) * 0.09 / 5;
+    }
   })
 
   return (
     <group {...props}
       dispose={null}
       ref={modelRef}
-       scale={[0.5, 0.5, 0.5]}
-       position={[0.4, -0.45, 0]}
+      scale={getScale()}
+      position={getBasePosition()}
       >
       
       <mesh

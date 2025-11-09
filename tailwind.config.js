@@ -34,7 +34,13 @@ module.exports = {
         'spin-slow-reverse': 'spin-reverse 40s linear infinite',
       },
       screens: {
-        xs: '480px',
+        'xxs': '320px',   // Very small phones
+        'xs': '480px',    // Small phones
+        'sm': '640px',    // Large phones / small tablets
+        'md': '768px',    // Tablets
+        'lg': '1024px',   // Laptops
+        'xl': '1280px',   // Desktops
+        '2xl': '1536px'   // Large desktops
       }
     },
   },

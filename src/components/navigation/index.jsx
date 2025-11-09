@@ -23,17 +23,19 @@ const Navigation = () => {
     const size = useScreenSize();
     const isLarge = size >= 1024;
     const isMedium = size >= 768;
+    const isSmall = size >= 480;
+    const isXSmall = size >= 320;
 
     return (
-        <div className='w-full fixed h-screen flex items-center justify-center'>    {/* Navigation buttons screen position */}
+        <div className='w-full fixed h-screen flex items-center justify-center z-50'>
+            {/* Debug: Show screen size */}
+            <div className="fixed top-4 left-4 p-2 text-sm z-50 plasma-text">
+                Screen: {size}px
+            </div>
             <ResponsiveComponent>
                 {({ size }) => {
                     return size && size >= 480 ? (
-                        <motion.div
-                            variants={container}
-                            initial="hidden"
-                            animate="show"
-                            className="w-max flex items-center justify-center relative hover:pause animate-spin-slow group">  {/* Satellite screen position */}
+                        <div className="w-max flex items-center justify-center relative hover:pause animate-spin-slow group">
                             {BtnList.map((btn, index) => {
                                 const angleRad = (index * angleIncrement * Math.PI) / 180
                                 const radius = isLarge
@@ -47,31 +49,23 @@ const Navigation = () => {
                                 return <NavButton key={btn.label} x={x} y={y} {...btn} />
                             })
                             }
-                        </motion.div>
+                        </div>
                     ) : (
                         <>
-                            <motion.div
-                                variants={container}
-                                initial="hidden"
-                                animate="show"
-                                className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 item-start xs:items-center justify-center relative group xs:hidden">  {/* Left Icon screen position */}
+                            <div className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-start xs:items-center justify-center relative group xs:hidden">
                                 {
-                                    BtnList.slice(0, BtnList.length / 2).map((btn) => {
+                                    BtnList.slice(0, Math.ceil(BtnList.length / 2)).map((btn) => {
                                         return <NavButton key={btn.label} x={0} y={0} {...btn} />
                                     })
                                 }
-                            </motion.div>
-                            <motion.div
-                                variants={container}
-                                initial="hidden"
-                                animate="show"
-                                className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group xs:hidden">  {/* Right Icon screen position */}
-                                {BtnList.slice(BtnList.length / 2, BtnList.length).map(
+                            </div>
+                            <div className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group xs:hidden">
+                                {BtnList.slice(Math.ceil(BtnList.length / 2), BtnList.length).map(
                                     (btn) => {
                                         return <NavButton key={btn.label} x={0} y={0} {...btn} labelDirection = "left" />
                                     }
                                 )}
-                            </motion.div>
+                            </div>
                         </>
                     );
                 }}

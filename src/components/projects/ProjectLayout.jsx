@@ -15,13 +15,13 @@ const ProjectLayout = ({ name, description, date, demoLink }) => {
             variants={item}
             href={demoLink}
             target={"_blank"}
-            className='text-sm md:text-base flex items-center justify-between w-full relative rounded-lg overflow-hiddenp-4 md:p-6 custom-bg'>
-            <div className='flex items-center justify-center space-x-2'>
-                <h2 className='text-foreground'>{name}</h2>
-                <p className='text-muted hidden sm:inline-block'>{description}</p>
+            className='text-xs xxs:text-sm md:text-base flex flex-col xxs:flex-row items-start xxs:items-center justify-between w-full relative rounded-lg overflow-hidden p-3 xxs:p-4 md:p-6 custom-bg space-y-2 xxs:space-y-0'>
+            <div className='flex flex-col xxs:flex-row xxs:items-center space-y-1 xxs:space-y-0 xxs:space-x-2 flex-shrink-0'>
+                <h2 className='text-foreground font-medium whitespace-nowrap'>{name}</h2>
+                <p className='text-muted text-xs xxs:text-sm hidden sm:block'>{description}</p>
             </div>
-            <div className='self-end flex-1 mx-2 mb-1 bg-transparent border border-b border-dashed border-muted' />
-            <p className='text-muted sm:text-foreground'>
+            <div className='hidden xxs:block flex-1 mx-2 border-b border-dashed border-muted' />
+            <p className='text-muted xxs:text-muted sm:text-foreground text-xs xxs:text-sm flex-shrink-0'>
                 {new Date(date).toDateString()}
             </p>
         </NavLink>
