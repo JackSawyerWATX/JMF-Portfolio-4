@@ -114,6 +114,13 @@ export const projectsData = [
     description: "Contact page for an apartment broker",
     date: "2024-11-01",
     demoLink: "https://main.d1ez8rgw1b2mi8.amplifyapp.com/"
+  },
+  {
+    id: 15,
+    name: "Skylab",
+    description: "Information on the United States' first space station",
+    date: "2025-11-08",
+    demoLink: "https://main.d12xtr33aiyayl.amplifyapp.com/"
   }
 
 ];
