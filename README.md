@@ -1,4 +1,4 @@
-# JMF Portfolio
+# Jonathan's Portfolio No. 4 :star:
 
 A modern, interactive portfolio website built with Three.js & Next.js, featuring 3D models, animations, and responsive design.
 
