@@ -121,6 +121,13 @@ export const projectsData = [
     description: "Information on the United States' first space station",
     date: "2025-11-08",
     demoLink: "https://main.d12xtr33aiyayl.amplifyapp.com/"
+  },
+  {
+    id: 16,
+    name: "Clipper",
+    description: "Logistics Management SaaS",
+    date: "2025-11-13",
+    demoLink: "https://master.d14l4jhlm1dxe2.amplifyapp.com/"
   }
 
 ];
