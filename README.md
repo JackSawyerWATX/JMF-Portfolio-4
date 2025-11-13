@@ -1,69 +1,102 @@
-Jonathan Fausset – Web Developer Portfolio
+# JMF Portfolio
 
-Welcome to the official portfolio of Jonathan Fausset, a seasoned web developer with a passion for crafting dynamic and user-centric digital experiences.
-🚀 About Me
+A modern, interactive portfolio website built with Three.js & Next.js, featuring 3D models, animations, and responsive design.
 
-As the Chief Flight Director of my web development journey, I specialize in:
+## Description
 
-    Frontend Development: Utilizing JavaScript, React.js, and Next.js to build responsive and engaging user interfaces.
+This is a personal portfolio website showcasing web development projects, skills, and experience. It includes interactive 3D models like the James Webb Space Telescope (JWST) and an orbiting satellite, along with smooth animations and a responsive layout.
 
-    Backend Development: Employing Node.js, Express.js, and Python frameworks like Django and Flask to create robust server-side applications.
+## Features
 
-    Full-Stack Solutions: Integrating frontend and backend technologies to deliver seamless and scalable web applications.
+- **Responsive Design**: Optimized for all screen sizes using Tailwind CSS.
+- **3D Models**: Interactive 3D models rendered with Three.js and React Three Fiber.
+- **Orbital Animation**: Dynamic background animation simulating orbital motion.
+- **Multiple Pages**: Home, About, Projects, and Contact sections.
+- **Modern UI**: Clean, modern interface with smooth transitions using Framer Motion.
+- **Performance Optimized**: Fast loading with Next.js optimizations.
 
-    Design & UX: Applying design principles to ensure intuitive and visually appealing user experiences.
+## Tech Stack
 
-🛠️ Projects
+- **Frontend Framework**: Next.js 14.2.10
+- **Styling**: Tailwind CSS
+- **3D Graphics**: Three.js, React Three Fiber
+- **Animations**: Framer Motion, CSS Keyframes
+- **Language**: JavaScript (ES6+)
+- **Build Tool**: npm
 
-Explore some of my recent projects:
+## Installation
 
-    Landon Hotel: A modern hotel booking platform with real-time availability and booking features.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JackSawyerWATX/JMF-Portfolio-4.git
+   cd JMF-Portfolio-4
+   ```
 
-    Antique Aircraft: An interactive catalog showcasing vintage aircraft with detailed specifications.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-    Photo Blog: A personal blog dedicated to photography, featuring galleries and articles.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-    Personal Blog: A space for sharing thoughts, tutorials, and insights on web development.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-    Local Weather: A weather forecasting application providing real-time updates and forecasts.
+## Usage
 
-    QR Generator: A tool for generating customizable QR codes for various purposes.
+- Navigate through the site using the navigation menu.
+- On the home page, enjoy the orbital background animation with the satellite.
+- Visit the About page to see the JWST model and personal details.
+- Check out the Projects page for showcased work.
+- Use the Contact page to get in touch.
 
-    Bishop's Record Store: An online store offering a curated selection of vinyl records.
+## Project Structure
 
-    Bishop's Cameras: An e-commerce platform for photography equipment and accessories.
+```
+JMF-Portfolio-4/
+├── public/
+│   ├── audio/
+│   ├── background/
+│   └── models/
+├── src/
+│   ├── app/
+│   │   ├── (sub pages)/
+│   │   │   ├── about/
+│   │   │   ├── contact/
+│   │   │   └── projects/
+│   │   ├── components/
+│   │   │   ├── about/
+│   │   │   ├── contact/
+│   │   │   ├── hooks/
+│   │   │   ├── models/
+│   │   │   ├── navigation/
+│   │   │   └── projects/
+│   │   ├── data.js
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
+│   └── components/
+│       ├── HomeBtn.jsx
+│       ├── MovingStars.jsx
+│       ├── RenderModel.jsx
+│       ├── ResponsiveComponent.jsx
+│       └── Sound.jsx
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── postcss.config.js
+├── README.md
+└── tailwind.config.js
+```
 
-📄 Resume
+## Contributing
 
-For a detailed overview of my professional experience, skills, and achievements, please refer to my resume.
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-    Current Role: Software Engineer at Scale AI, San Francisco Bay Area.
+## License
 
-    Previous Experience: Full Stack Developer at Jack Sawyer Software, Seattle, WA.
+This project is licensed under the MIT License.
 
-    Technical Skills: Proficient in Python, Java, JavaScript, TypeScript, Node.js, React, Django, Flask, SQL, NoSQL, AWS, and more.
-
-    Professional Highlights: Led development of communications systems, optimized UX, implemented CI/CD pipelines, and enhanced software robustness.
-    jonathanfausset.com+1jonathanfausset.com+1
-
-Download my resume.
-
-📬 Contact
-
-Ready to collaborate or have questions? Reach out to me through the contact form on my website.
-
-    Email: jonathan.fausset@me.com
-
-    Phone: 206-713-3756
-
-    LinkedIn: linkedin.com/in/jonathan-fausset-dev
-
-    GitHub: github.com/jacksawyerwatx
-
-    BlueSky: bsky.app
-
-Contact me.
-
-🌌 Let's Connect!
-
-Embark on a digital journey with me. Together, we can explore new horizons in web development and create impactful online experiences.
+### I love you all! Happy coding!
