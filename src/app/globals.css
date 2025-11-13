@@ -60,7 +60,7 @@
         transform: translateX(0%) translateY(0%);
     }
     100% {
-        transform: translateX(-30%) translateY(-10.5%);
+        transform: translateX(-30%) translateY(-8%);
     }
 }
 
