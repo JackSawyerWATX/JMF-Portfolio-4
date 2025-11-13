@@ -90,7 +90,7 @@ export const projectsData = [
   {
     id: 11,
     name: "Jack Sawyer Software",
-    description: "A SaaS website for a fictional software company",
+    description: "A website for a SaaS company",
     date: "2024-01-01",
     demoLink: "https://main.d223d5tdol49nx.amplifyapp.com/",
   },
@@ -125,7 +125,7 @@ export const projectsData = [
   {
     id: 16,
     name: "Clipper",
-    description: "Logistics Management SaaS",
+    description: "Logistics Management - SaaS",
     date: "2025-11-13",
     demoLink: "https://master.d14l4jhlm1dxe2.amplifyapp.com/"
   }
