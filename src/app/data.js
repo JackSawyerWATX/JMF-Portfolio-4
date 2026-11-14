@@ -18,18 +18,32 @@ Websites:
 
 export const projectsData = [
   {
+    id: 19,
+    name: "Municipal Financial Management",
+    description: "Municipal Financial Management website",
+    date: "2026-11-14",
+    demoLink: "https://mfminc-tx.com/",
+  },
+  {
+    id: 18,
+    name: "Dead Dirt",
+    description: "Dead Dirt website",
+    date: "2026-11-14",
+    demoLink: "https://deaddirtsupply.com/",
+  },
+  {
+    id: 17,
+    name: "Silver Heart Care",
+    description: "Silver Heart Care website",
+    date: "2026-11-14",
+    demoLink: "https://silverheartcare.org/",
+  },
+  {
     id: 1,
     name: "Landon Hotel",
     description: "Clone of a website for a hotel in London",
     date: "2023-11-19",
     demoLink: "https://master.de0tmva8pq6x6.amplifyapp.com/",
-  },
-  {
-    id: 2,
-    name: "Antique Aircraft",
-    description: "A simple website showcasing the use of Parallax",
-    date: "2023-10-06",
-    demoLink: "https://main.d2imdrhasvzmd4.amplifyapp.com/",
   },
   {
     id: 3,
@@ -46,13 +60,6 @@ export const projectsData = [
     demoLink: "https://master--jonchron.netlify.app/",
   },
   {
-    id: 5,
-    name: "Local Weather",
-    description: "Returns current local weather",
-    date: "2021-12-16",
-    demoLink: "https://master.dyn0i5lcp1qs2.amplifyapp.com/",
-  },
-  {
     id: 6,
     name: "QR Generator",
     description: "Use this to make a QR Code",
@@ -60,25 +67,11 @@ export const projectsData = [
     demoLink: "https://master.d25rxr59yv6xo2.amplifyapp.com/",
   },
   {
-    id: 7,
-    name: "Bishop's Record Store",
-    description: "An album database built on the PERN stack",
-    date: "2025-03-24",
-    demoLink: "https://pern-store-a4w9.onrender.com/",
-  },
-  {
     id: 8,
     name: "Bishop's Cameras",
     description: "A full stack web store built on the MERN stack",
     date: "2025-04-30",
     demoLink: "https://e-commerce-store-nlnd.onrender.com/",
-  },
-  {
-    id: 9,
-    name: "Portfolio 1.0",
-    description: "My first site using static HTML, CSS, & JavaScript",
-    date: "2022-07-12",
-    demoLink: "https://main.d33zr5pqj7f3ln.amplifyapp.com/",
   },
   {
     id: 10,
@@ -127,7 +120,7 @@ export const projectsData = [
     name: "Clipper",
     description: "Logistics Management - SaaS",
     date: "2025-11-13",
-    demoLink: "https://master.d14l4jhlm1dxe2.amplifyapp.com/"
+    demoLink: "https://main.d38pan5g8dqwan.amplifyapp.com/"
   }
 
 ];
@@ -160,6 +153,16 @@ export const BtnList = [
     label: "Resume",
     link: "/resume.pdf",
     icon: "resume",
+    newTab: true,
+  },
+  {
+    label: "Facebook",
+    link: "https://www.facebook.com/profile.php?id=61595845191269",
+    newTab: true,
+  },
+  {
+    label: "Syntronic Labs",
+    link: "https://syntroniclabs.dev/",
     newTab: true,
   },
 ];

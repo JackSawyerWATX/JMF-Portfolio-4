@@ -4,26 +4,12 @@ import ProjectList from "@/components/projects";
 import { projectsData } from "../../data";
 import RenderModel from "@/components/RenderModel";
 import dynamic from "next/dynamic";
-
-const SaturnV = dynamic(() => import("@/components/models/SaturnV"), { ssr: false });
-
-export default function Home() {
-    return (
-        <>
-            <Image
-                priority
-                sizes="100vw"
-                src={bg}
-                alt="background image"
-                className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-25" />
-
-            <ProjectList projects={projectsData} />
-
-            <div className='flex items-center justify-center fixed top-8 xxs:top-12 xs:top-16 lg:top-20 -translate-x-1/2 lg:-translate-x-8 -z-10 left-1/2 lg:left-0 h-screen w-full lg:w-auto'>
-                <RenderModel className="w-full h-full">
-                    <SaturnV />
-                </RenderModel>
-            </div>
-        </>
-    );
+const SaturnV = dynamic(() => import("@/components/models/SaturnV"), {
+  ssr: false
+});
+export const metadata = {
+  title: "Projects | Jonathan Fausset"
+};
+export default function Projects() {
+  return <div><Image priority sizes="100vw" src={bg} alt="" className="interior-background" /><section className="projects-hero"><div><p className="eyebrow">03 / SELECTED EXPLORATIONS</p><h1>Ideas into<br /><span>orbit.</span></h1><p className="page-intro">A collection of websites, applications, and experiments. Each project, a new perspective.</p></div><div className="rocket-stage"><RenderModel><SaturnV /></RenderModel></div></section><div className="section-label"><span>MISSION ARCHIVE</span><span>{projectsData.length} PROJECTS</span></div><ProjectList projects={projectsData} /></div>;
 }

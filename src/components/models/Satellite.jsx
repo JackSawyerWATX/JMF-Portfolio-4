@@ -8,7 +8,7 @@ Source: https://sketchfab.com/3d-models/satellite-51b687b2effb4bd9a1176a8d45b715
 Title: Satellite
 */
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { PerspectiveCamera, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import useScreenSize from '../hooks/useScreenSize'
@@ -19,6 +19,15 @@ export default function Satellite(props) {
 
     const modelRef = useRef()
     const cameraRef = useRef()
+    const reducedMotion = useRef(false)
+
+    useEffect(() => {
+        const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
+        const update = () => { reducedMotion.current = preference.matches }
+        update()
+        preference.addEventListener('change', update)
+        return () => preference.removeEventListener('change', update)
+    }, [])
 
     // Responsive scaling and positioning
     const getScale = () => {
@@ -34,22 +43,20 @@ export default function Satellite(props) {
         return [-14, -14, -7]; // Desktop
     };
 
-    useFrame((state, delta, xrFrame) => {
-        // This function controls satellite movement
-        // OPTION 1
-        // modelRef.current.position.y = -0.1 / 2 + Math.sin(state.clock.elapsedTime) * 0.1 / 120;
-        // modelRef.current.position.x = -0.4 / 2 + Math.cos(state.clock.elapsedTime) * 0.1 / 200;
-        // OPTION 2
-        modelRef.current.position.y = .2 + Math.sin(state.clock.elapsedTime) * 1.1 / 100;
-        modelRef.current.position.x = -0.4 + Math.cos(state.clock.elapsedTime) * 2 / 100;
-        modelRef.current.position.z = -7; // Push the satellite further back in the Z-axis
-
-        // Make the background zoom faster by adjusting camera FOV
-        if (cameraRef.current) {
-            // Increase FOV to zoom in faster
-            cameraRef.current.fov = 105 + Math.sin(state.clock.elapsedTime) * .25;
-            cameraRef.current.updateProjectionMatrix();
-        }
+    useFrame((state) => {
+        if (!modelRef.current) return
+        // A continuous, inclined orbit above the moving Earth background.
+        const phase = reducedMotion.current ? 0 : state.clock.elapsedTime * Math.PI * 2 / 56.25
+        modelRef.current.position.set(
+            -0.4 + Math.sin(phase) * 2.4,
+            0.2 + Math.sin(phase) * 0.65 + (Math.cos(phase) - 1) * 0.3,
+            -7 + (Math.cos(phase) - 1) * 0.7
+        )
+        modelRef.current.rotation.set(
+            0.1 + Math.sin(phase) * 0.04,
+            -0.3 + Math.sin(phase) * 0.15,
+            -0.12 + Math.cos(phase) * 0.06
+        )
     })
 
     return (
@@ -58,7 +65,7 @@ export default function Satellite(props) {
                 ref={cameraRef}
                 makeDefault
                 position={[0, 0, 0]} // Set an initial camera position
-                fov={750}  // Initial field of view
+                fov={105}
             />
             <group {...props} dispose={null}    // Makes adjustments to the satellite position
                 ref={modelRef}

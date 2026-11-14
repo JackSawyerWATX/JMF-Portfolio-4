@@ -38,7 +38,7 @@ export default function Jwst(props) {
       modelRef.current.rotation.y += -0.0025
       const basePos = getBasePosition();
       modelRef.current.position.y = basePos[1] + Math.sin(state.clock.elapsedTime) * 0.09 / 5;
-      modelRef.current.position.x = basePos[0] + 1.2 + Math.cos(state.clock.elapsedTime) * 0.09 / 5;
+      modelRef.current.position.x = Math.cos(state.clock.elapsedTime) * 0.09 / 5;
     }
   })
 
