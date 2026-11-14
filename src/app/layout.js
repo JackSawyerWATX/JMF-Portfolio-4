@@ -9,8 +9,36 @@ const inter = Inter({
   variable: "--font-inter"
 });
 export const metadata = {
-  title: "Jonathan Fausset",
-  description: "Portfolio Website"
+  title: "Jonathan Fausset | Web Developer & Software Engineer",
+  description:
+    "Explore the portfolio of Jonathan Fausset, a web developer and software engineer building thoughtful digital experiences with modern web technologies.",
+  applicationName: "Jonathan Fausset Portfolio",
+  authors: [{ name: "Jonathan Fausset" }],
+  creator: "Jonathan Fausset",
+  keywords: [
+    "Jonathan Fausset",
+    "Jonathan Fausset portfolio",
+    "Jonathan Fausset software engineer",
+    "Jonathan Fausset web developer"
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Jonathan Fausset Portfolio",
+    title: "Jonathan Fausset | Web Developer & Software Engineer",
+    description:
+      "Explore the portfolio of Jonathan Fausset, a web developer and software engineer building thoughtful digital experiences with modern web technologies."
+  },
+  twitter: {
+    card: "summary",
+    title: "Jonathan Fausset | Web Developer & Software Engineer",
+    description:
+      "Explore the portfolio of Jonathan Fausset, a web developer and software engineer building thoughtful digital experiences with modern web technologies."
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 export const viewport = {
   width: "device-width",
