@@ -1,32 +1,10 @@
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import React from 'react'
-
-const item = {
-    hidden: { opacity: 0, y: 100 },
-    show: { opacity: 1, y: 0 }
+import { ArrowRight } from "lucide-react";
+export default function ProjectLayout({
+  name,
+  description,
+  date,
+  demoLink,
+  index
+}) {
+  return <a href={demoLink} target="_blank" rel="noopener noreferrer" className="project-card"><div className="project-card-top"><span>MISSION {String(index + 1).padStart(2, "0")}</span><ArrowRight size={21} /></div><h2>{name}</h2><p>{description}</p><div className="project-card-bottom"><span>{date.slice(0, 4)}</span><span>VIEW PROJECT</span></div></a>;
 }
-
-const NavLink = motion(Link)
-
-const ProjectLayout = ({ name, description, date, demoLink }) => {
-    return (
-        <NavLink
-            variants={item}
-            href={demoLink}
-            target={"_blank"}
-            className='text-xs xxs:text-sm md:text-base flex flex-col xxs:flex-row items-start xxs:items-center justify-between w-full relative rounded-lg overflow-hidden p-3 xxs:p-4 md:p-6 custom-bg space-y-2 xxs:space-y-0'>
-            <div className='flex flex-col xxs:flex-row xxs:items-center space-y-1 xxs:space-y-0 xxs:space-x-2 flex-shrink-0'>
-                <h2 className='text-foreground font-medium whitespace-nowrap'>{name}</h2>
-                <p className='text-muted text-xs xxs:text-sm hidden sm:block'>{description}</p>
-            </div>
-            <div className='hidden xxs:block flex-1 mx-2 border-b border-dashed border-muted' />
-            <p className='text-muted xxs:text-muted sm:text-foreground text-xs xxs:text-sm flex-shrink-0'>
-                {new Date(date).toDateString()}
-            </p>
-        </NavLink>
-    )
-}
-
-export default ProjectLayout
-

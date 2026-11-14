@@ -1,31 +1,6 @@
-"use client"
-import { motion } from 'framer-motion'
-import ProjectLayout from './ProjectLayout'
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 1.5,
-    }
-  }
+import ProjectLayout from "./ProjectLayout";
+export default function ProjectList({
+  projects
+}) {
+  return <div className="project-grid">{[...projects].sort((a, b) => b.date.localeCompare(a.date)).map((project, index) => <ProjectLayout key={project.id} {...project} index={index} />)}</div>;
 }
-
-const ProjectList = ({ projects }) => {
-  return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      className='w-full max-w-auto xl:max-w-4xl px-3 xxs:px-4 mx-auto lg:px-16 space-y-3 xxs:space-y-4 md:space-y-6 lg:space-y-8 flex flex-col items-center'>
-      {projects.map((project, index) => {
-        return <ProjectLayout key={index} {...project} />
-      })}
-    </motion.div>
-  )
-}
-
-export default ProjectList
-
