@@ -9,17 +9,17 @@
   display: flex;
   align-items: center;
   padding: 64px max(6%, calc((100vw - 1268px) / 2)) 100px;
-  background: radial-gradient(ellipse at 90% 70%, #142d42, transparent 65%);
+  background-image: linear-gradient(90deg, #070d17ed 0%, #070d17b3 45%, #070d1733 100%), url('/background/404-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .lost-content { position: relative; max-width: 780px; }
 .lost-number { font-size: clamp(72px, 12vw, 144px); line-height: 1; font-weight: 500; letter-spacing: -6px; color: #85dce6; margin-bottom: 22px; }
 .lost-content h1 { font-size: clamp(42px, 5.5vw, 76px); }
 .lost-content .page-intro { max-width: 455px; }
-.lost-orbit { position: absolute; right: -12%; top: 5%; width: min(75vw, 900px); color: #85dce612; pointer-events: none; }
-.lost-orbit svg { width: 100%; height: auto; }
 @media(max-width:600px) {
   .lost-page { min-height: calc(100svh - 80px); padding-top: 48px; }
-  .lost-orbit { width: 130vw; right: -55%; top: 20%; }
 }
 :root {
   --background: 7 13 23;

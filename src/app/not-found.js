@@ -34,7 +34,6 @@ export default function NotFound() {
   return (
     <main className="lost-page">
       <audio ref={audio} src="/audio/apollo13-houston-problem.mp3" preload="none" />
-      <div className="lost-orbit" aria-hidden="true"><Orbit strokeWidth={0.7} /></div>
       <section className="lost-content" aria-labelledby="lost-heading">
         <p className="eyebrow"><Radio size={14} aria-hidden="true" /> SIGNAL LOST / 404</p>
         <p className="lost-number" aria-hidden="true">404</p>
