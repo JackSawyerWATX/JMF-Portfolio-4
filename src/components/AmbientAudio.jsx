@@ -3,11 +3,34 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 
 const AmbientContext = createContext(null);
+const AMBIENT_PREFERENCE_KEY = "portfolio-ambient-enabled";
 
 export function AmbientAudioProvider({ children }) {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, updateEnabled] = useState(false);
   const [hovered, setHovered] = useState(false);
   const context = useRef(null);
+
+  useEffect(() => {
+    try {
+      updateEnabled(localStorage.getItem(AMBIENT_PREFERENCE_KEY) === "true");
+    } catch {
+      // Keep the in-memory preference when browser storage is unavailable.
+    }
+    const syncPreference = event => {
+      if (event.key === AMBIENT_PREFERENCE_KEY) updateEnabled(event.newValue === "true");
+    };
+    window.addEventListener("storage", syncPreference);
+    return () => window.removeEventListener("storage", syncPreference);
+  }, []);
+
+  const setEnabled = useCallback(value => {
+    updateEnabled(value);
+    try {
+      localStorage.setItem(AMBIENT_PREFERENCE_KEY, String(value));
+    } catch {
+      // Navigation still preserves the preference through the shared provider.
+    }
+  }, []);
 
   const playBeacon = useCallback(() => setHovered(true), []);
   const stopBeacon = useCallback(() => setHovered(false), []);
