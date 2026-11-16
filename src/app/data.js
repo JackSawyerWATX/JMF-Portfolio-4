@@ -47,10 +47,10 @@ export const projectsData = [
   },
   {
     id: 3,
-    name: "Photo Blog",
-    description: "Gallery to share photography",
+    name: "Strategic Air Command",
+    description: "Explore the U. S. Air Force’s Cold War legacy.",
     date: "2024-10-10",
-    demoLink: "https://master.d2d6sf0i0ht16r.amplifyapp.com/",
+    demoLink: "https://main.d2bip2n8su4l6d.amplifyapp.com/",
   },
   {
     id: 4,
